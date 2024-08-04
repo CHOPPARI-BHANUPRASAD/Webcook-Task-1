@@ -1,0 +1,95 @@
+/* Body styling for a centered calculator */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Calculator container styling */
+.calculator {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Screen styling */
+.calculator-screen {
+    width: 100%;
+    height: 60px;
+    background: #222;
+    color: #fff;
+    text-align: right;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid layout for calculator keys */
+.calculator-keys {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Common button styling */
+.key {
+    background: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+/* Button active state */
+.key:active {
+    background: #ccc;
+    transform: scale(0.95);
+}
+
+/* Operator button styling */
+.operator {
+    background: #ff9500;
+    color: #fff;
+}
+
+/* Operator button active state */
+.operator:active {
+    background: #e08900;
+}
+
+/* Equal sign button styling */
+.equal-sign {
+    grid-column: span 4;
+    background: #28a745;
+    color: #fff;
+}
+
+/* Equal sign button active state */
+.equal-sign:active {
+    background: #218838;
+}
+
+/* All clear button styling */
+.all-clear {
+    background: #dc3545;
+    color: #fff;
+}
+
+/* All clear button active state */
+.all-clear:active {
+    background: #c82333;
+}
