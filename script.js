@@ -13,12 +13,13 @@ class Calculator {
         this.prevValue = '';      // Previous value stored for operations
         this.operator = null;     // Operator for the current calculation
         this.updateScreen();      // Update the screen display
+        this.screenElement.style.backgroundColor = '#1f127888'; // Reset the screen color
     }
 
     // Method to append number or decimal to the current value
     appendNumber(number) {
         // Prevent multiple leading zeros
-        if (this.currentValue === '0') {
+        if (this.currentValue === '0' && number !== '.') {
             this.currentValue = number;
         } else {
             this.currentValue += number;
@@ -64,11 +65,17 @@ class Calculator {
         this.operator = null;  // Reset operator
         this.prevValue = '';  // Clear previous value
         this.updateScreen();  // Update the screen display
+        this.changeScreenColor(); // Change screen color after calculation
     }
 
     // Method to update the screen display
     updateScreen() {
         this.screenElement.innerText = this.currentValue;
+    }
+
+    // Method to change the screen color
+    changeScreenColor() {
+        this.screenElement.style.background='linear-gradient(120deg,#383cb6, #e7701b)'; // Change to desired color
     }
 
     // Method to handle button presses

@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: linear-gradient(135deg, #e7701b, #383cb6);
     font-family: 'Arial', sans-serif;
 }
 
@@ -13,7 +13,7 @@ body {
 .calculator {
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.782);
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ body {
 .calculator-screen {
     width: 100%;
     height: 60px;
-    background: #222;
+    background: #000000;
     color: #fff;
     text-align: right;
     font-size: 2rem;
@@ -53,6 +53,9 @@ body {
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
 }
+.key:hover {
+    background: linear-gradient(90deg, #f6e604, #ed18c9);
+}
 
 /* Button active state */
 .key:active {
@@ -70,17 +73,24 @@ body {
 .operator:active {
     background: #e08900;
 }
+.operator:hover {
+    background: linear-gradient(120deg, #383cb6, #222);
+}
 
 /* Equal sign button styling */
 .equal-sign {
     grid-column: span 4;
-    background: #28a745;
+    background: #18e10d;
     color: #fff;
+}
+.equal-sign:hover {
+    color: rgb(0, 0, 0);
+    background: #383cb6;
 }
 
 /* Equal sign button active state */
 .equal-sign:active {
-    background: #218838;
+    background: #2ca823;
 }
 
 /* All clear button styling */
@@ -92,4 +102,7 @@ body {
 /* All clear button active state */
 .all-clear:active {
     background: #c82333;
+}
+.all-clear:hover {
+    background: linear-gradient(120deg, #ff0000, #1f127888);
 }
